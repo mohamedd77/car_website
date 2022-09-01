@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+    <html>
+<head>
+<title>Login page</title>
+<style>
+body{
+margin:0;
+padding:0;
+font-family: sans-serif;
+background: url(images/car.jpg) no-repeat;
+opacity:.8;
+background-position: 50% 20%;
+}
+.login-box{
+width: 280px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform:translate(-50%,-50%);
+color:black;
+}
+.login-box h1{
+float: left;
+font-size: 40px;
+border-bottom: 6px solid #004d40;
+margin-bottom: 50px;
+padding: 13px 0;
+}
+
+.textbox{
+width:100%;
+overflow:hidden;
+font-size: 20px;
+padding:8px 0;
+margin:8px 0;
+border-bottom: 1px solid #004d40;
+}
+.textbox input{
+border:none;
+outline:none;
+color:black;
+background: none;
+width:80%;
+float:left;
+margin:0 10px;
+}
+.textbox placeholder{
+color:blue;
+}
+button{
+width:100%;
+background: none;
+border: 2px solid #004d40;
+color: black;
+padding: 5px;
+}
+                
+
+</style>
+
+<script >
+	function page(){
+	
+		
+		if(document.inputForm.username.value=="admin" && document.inputForm.password.value=="admin")
+		{
+			  window.open('admin.html')
+		}
+		else
+		{
+			 window.open("home.html");
+		}
+		
+	}
+	
+	</script>  
+</head>
+<body>
+<div class="login-box">
+<h1>Login</h1>
+<form name="inputForm"  onsubmit="page()">
+<div class="textbox">
+<input type="text" placeholder="Enter your name" name="username" required><br>
+</div>
+<div class="textbox">
+<input type="password" placeholder="Enter your password" name="password" required>
+</div>
+<label>
+<button type="submit">Login</button>
+</label>
+<input type="checkbox" name="remember">Remember me<br>
+<span class="pas">Need to <a href="regi.html">Register?</a></span>
+
+</div>
+</form>
+</body>
+</html>

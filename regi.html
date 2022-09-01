@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>register page</title>
+            <link rel="stylesheet" href="style.css">
+            <style>
+                body{
+                    margin: 50px 0px 0px 100px;
+                    padding: 0;
+                    font-family:arial, Helvetica, sans-serif;
+                    background: url(images/speed.jpg) no-repeat;
+                    background-size: 1800px 1000px
+                }
+ input[type=text], input[type=password] {
+  padding: 8px;
+    display: inline-block;
+  margin: 7px;
+  border: none;
+  background: white;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: black;
+  outline: none;
+}
+hr{
+    border: 1px solid black;
+    margin-bottom: 25px;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.registration{
+    background-color: black;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+position: absolute;
+top: 55%;
+left: 30%;
+  opacity: 0.9;
+    
+}
+</style>
+         <script>
+                function validate()
+			{
+				var n =document.vform.name.value;
+				var x=document.vform.pas.value;
+				var y= document.vform.repeat_pas.value;
+				var l = document.vform.pas.value.length;
+				if (n== "")
+				{
+					alert("Name must be filled out");
+					document.vform.name.focus();
+				}
+				else if(l<6)
+				{
+					alert("the password must be at least 6 charter");
+					document.vform.pas.focus();
+				}
+				else if(x !=y)
+				{
+					alert("the two password are differnet");
+					document.vform.pas.focus();
+				}
+				else
+				{
+					alert ("you registered successfully");
+					window.open('login.html');
+				}
+				
+			}
+                     
+  
+                   
+                
+          </script>
+        </head>
+        <body>
+                <h1>Register page</h1>
+                       <p>Fill This Form to Create an Account:</p>
+    <hr>
+                                <div class="frm">
+
+        <form method="post" onsubmit="validate()"  name="vform">
+                            <div id="name_div">
+                                <label for="name"<b>Name</b></label>
+        <input type="text" placeholder="Enter your name.." name="name">
+             <div id="name_error"></div>
+                            </div>
+                        <div id="password_div">
+            <label for="pas"<b>Password</b></label>
+        <input type="password" placeholder="Enter your password.." name="pas" >
+     <div id="password_error"></div>
+                        </div>
+                        <div id="repeat_password_div">
+            <label for="repeat_pas"<b>Repeat The Passowrd</b></label>
+        <input type="password" placeholder="Repeat your password.." name="repeat_pas" >
+               	   <div id="repeat_password_error"></div>
+                        </div>
+             <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+            <div class="reg">
+    <a  href="result.html">
+       <button>register</button> 
+    </a>
+        </div>
+                        
+        </form>
+                                </div>    
+        </body>
+    </html>
